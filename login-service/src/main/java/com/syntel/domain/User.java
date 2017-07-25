@@ -1,8 +1,20 @@
 package com.syntel.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
 public class User {
 	
+	@Id
+	private String mobileNumber;
 	private String emailId;
 	private String name;
+	private String password;
+	private int userType;
+	
+	public User(){}
 	public String getEmailId() {
 		return emailId;
 	}
@@ -33,9 +45,7 @@ public class User {
 	public void setUserType(int userType) {
 		this.userType = userType;
 	}
-	private String mobileNumber;
-	private String password;
-	private int userType;
+	
 	
 
 }
