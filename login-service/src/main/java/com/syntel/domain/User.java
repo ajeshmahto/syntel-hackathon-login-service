@@ -2,9 +2,11 @@ package com.syntel.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 
 @Entity
+@NamedQuery(name = "User.verifyLogin", query = "SELECT u FROM User u WHERE u.mobileNumber = ?1 and u.password=?2")
 public class User {
 	
 	@Id
