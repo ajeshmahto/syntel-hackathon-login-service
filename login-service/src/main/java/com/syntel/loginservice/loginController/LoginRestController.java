@@ -43,7 +43,7 @@ public class LoginRestController {
 		 User userResult = new User();
 		 if((userResult = loginRepository.findOne(user.getMobileNumber()))!=null){
 				response.setStatus("SUCCESS");
-				response.setResponse(user);
+				response.setResponse(userResult);
 				return new ResponseEntity<Response>(response,HttpStatus.OK);
 		   }
 		    response.setStatus("FAIL");
